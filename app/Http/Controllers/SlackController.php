@@ -40,7 +40,7 @@ class SlackController extends Controller
             });
             
             $slackBot->fallback(function(SlackBot $bot) {
-                $bot->respond("Lol wut? I don\'t understand.");
+                $bot->reply('Lol wut? I don\'t understand.');
             });
             
             $slackBot->listen();

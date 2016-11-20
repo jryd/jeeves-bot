@@ -34,3 +34,5 @@
 [20-Nov-2016 01:39:14 UTC] PHP Fatal error:  Call to undefined method Mpociot\SlackBot\Button::stlye() in /home/ubuntu/workspace/app/Http/Controllers/MessageConversation.php on line 28
 [20-Nov-2016 01:39:16 UTC] PHP Fatal error:  Call to undefined method Mpociot\SlackBot\Button::stlye() in /home/ubuntu/workspace/app/Http/Controllers/MessageConversation.php on line 28
 [20-Nov-2016 04:04:04 UTC] PHP Fatal error:  Class 'App\Http\Controllers\AlertrEmail' not found in /home/ubuntu/workspace/app/Http/Controllers/MessageConversation.php on line 75
+[20-Nov-2016 05:19:13 UTC] PHP Fatal error:  Call to undefined method Mpociot\SlackBot\SlackBot::respond() in /home/ubuntu/workspace/app/Http/Controllers/SlackController.php on line 43
+[20-Nov-2016 05:19:15 UTC] PHP Fatal error:  Call to undefined method Mpociot\SlackBot\SlackBot::respond() in /home/ubuntu/workspace/app/Http/Controllers/SlackController.php on line 43
