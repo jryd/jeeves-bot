@@ -171,6 +171,8 @@ return [
         \Mpociot\SlackBot\SlackBotServiceProvider::class,
         Propaganistas\LaravelPhone\LaravelPhoneServiceProvider::class,
         'Aloha\Twilio\Support\Laravel\ServiceProvider',
+        Geocoder\Laravel\Providers\GeocoderService::class,
+        'Alaouy\Youtube\YoutubeServiceProvider',
 
         /*
          * Application Service Providers...

@@ -11,7 +11,9 @@
         "mpociot/socialite-slack": "^1.1",
         "mpociot/slackbot": "^0.1.1",
         "propaganistas/laravel-phone": "^2.8",
-        "aloha/twilio": "^3.0"
+        "aloha/twilio": "^3.0",
+        "toin0u/geocoder-laravel": "1.0.0-RC1@dev",
+        "alaouy/youtube": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

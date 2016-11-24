@@ -7,6 +7,9 @@ use Mpociot\SlackBot\Button;
 use Mpociot\SlackBot\Question;
 use Mpociot\SlackBot\SlackBot;
 
+use GuzzleHttp\Client;
+use Youtube;
+
 class SlackController extends Controller
 {
     public function slack(Request $request)
@@ -29,19 +32,23 @@ class SlackController extends Controller
                 $bot->reply('World! :earth_asia:');
             });
             
-            $slackBot->hears('buttons', function (SlackBot $bot) use ($request) {
-                $bot->reply(Question::create('Here are some buttons!')->addButton(Button::create('Hello World')->value('hello world'))->callbackId("helloWorldButton"));
-            });
-            
             $slackBot->hears('msg', function (SlackBot $bot) use ($request) {
-
-              $bot->startConversation(new MessageConversation());
-            
+                $bot->startConversation(new MessageConversation());
             });
             
+            $slackBot->hears('weather', function (SlackBot $bot) use ($request) {
+                $bot->startConversation(new WeatherConversation());
+            });
+            
+            $slackBot->hears('youtube {query}', function (SlackBot $bot, $query) use ($request) {
+                $videoList = Youtube::searchVideos($query);
+                $bot->reply('https://www.youtube.com/watch?v=' . $videoList[0]->id->videoId);
+            });
+            
+            /* Currently not working - spams channel - bug logged
             $slackBot->fallback(function(SlackBot $bot) {
                 $bot->reply('Lol wut? I don\'t understand.');
-            });
+            });*/
             
             $slackBot->listen();
             

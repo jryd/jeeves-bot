@@ -36,3 +36,10 @@ Route::get('/connect/slack', function(\GuzzleHttp\Client $httpClient){
     $bot_token = json_decode($response->getBody())->bot->bot_access_token;
     echo "Your Bot Token is: ". $bot_token. " place it inside your .env as SLACK_TOKEN";
 });
+
+Route::get('/test', function() {
+        $videoList = Youtube::searchVideos('Onlap Nightcore remix');
+        dd('https://www.youtube.com/watch?v=' . $videoList[0]->id->videoId);
+        /*$video = Youtube::getVideoInfo('roPgfuE6n0A');
+        dd($video);*/
+});
