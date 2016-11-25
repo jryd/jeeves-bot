@@ -119,3 +119,22 @@
 [24-Nov-2016 11:55:57 UTC] PHP Fatal error:  Call to a member function first() on array in /home/ubuntu/workspace/routes/web.php on line 41
 [24-Nov-2016 11:57:08 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Youtube' not found in /home/ubuntu/workspace/app/Http/Controllers/SlackController.php on line 39
 [24-Nov-2016 11:57:09 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Youtube' not found in /home/ubuntu/workspace/app/Http/Controllers/SlackController.php on line 39
+[25-Nov-2016 10:03:06 UTC] PHP Parse error:  syntax error, unexpected 'function' (T_FUNCTION) in /home/ubuntu/workspace/app/Http/Controllers/SlackController.php on line 48
+[25-Nov-2016 10:03:07 UTC] PHP Parse error:  syntax error, unexpected 'function' (T_FUNCTION) in /home/ubuntu/workspace/app/Http/Controllers/SlackController.php on line 48
+[25-Nov-2016 10:03:13 UTC] PHP Parse error:  syntax error, unexpected 'function' (T_FUNCTION) in /home/ubuntu/workspace/app/Http/Controllers/SlackController.php on line 48
+[25-Nov-2016 10:03:14 UTC] PHP Parse error:  syntax error, unexpected 'function' (T_FUNCTION) in /home/ubuntu/workspace/app/Http/Controllers/SlackController.php on line 48
+[25-Nov-2016 10:03:55 UTC] PHP Parse error:  syntax error, unexpected '$slackBot' (T_VARIABLE) in /home/ubuntu/workspace/app/Http/Controllers/SlackController.php on line 62
+[25-Nov-2016 10:03:56 UTC] PHP Parse error:  syntax error, unexpected '$slackBot' (T_VARIABLE) in /home/ubuntu/workspace/app/Http/Controllers/SlackController.php on line 62
+[25-Nov-2016 10:04:09 UTC] PHP Parse error:  syntax error, unexpected '$slackBot' (T_VARIABLE) in /home/ubuntu/workspace/app/Http/Controllers/SlackController.php on line 62
+[25-Nov-2016 10:05:54 UTC] PHP Parse error:  syntax error, unexpected ')', expecting identifier (T_STRING) or namespace (T_NAMESPACE) or \\ (T_NS_SEPARATOR) in /home/ubuntu/workspace/app/Http/Controllers/SlackController.php on line 52
+[25-Nov-2016 10:05:55 UTC] PHP Parse error:  syntax error, unexpected ')', expecting identifier (T_STRING) or namespace (T_NAMESPACE) or \\ (T_NS_SEPARATOR) in /home/ubuntu/workspace/app/Http/Controllers/SlackController.php on line 52
+[25-Nov-2016 10:06:01 UTC] PHP Parse error:  syntax error, unexpected ')', expecting identifier (T_STRING) or namespace (T_NAMESPACE) or \\ (T_NS_SEPARATOR) in /home/ubuntu/workspace/app/Http/Controllers/SlackController.php on line 52
+[25-Nov-2016 10:06:02 UTC] PHP Parse error:  syntax error, unexpected ')', expecting identifier (T_STRING) or namespace (T_NAMESPACE) or \\ (T_NS_SEPARATOR) in /home/ubuntu/workspace/app/Http/Controllers/SlackController.php on line 52
+[25-Nov-2016 10:21:47 UTC] PHP Fatal error:  Call to undefined function guzzlehttp\client() in /home/ubuntu/workspace/routes/web.php on line 41
+[25-Nov-2016 10:22:01 UTC] PHP Fatal error:  Call to undefined function guzzlehttp\client() in /home/ubuntu/workspace/routes/web.php on line 41
+[25-Nov-2016 10:54:00 UTC] PHP Parse error:  syntax error, unexpected '$slackBot' (T_VARIABLE) in /home/ubuntu/workspace/app/Http/Controllers/SlackController.php on line 67
+[25-Nov-2016 10:54:00 UTC] PHP Parse error:  syntax error, unexpected '$slackBot' (T_VARIABLE) in /home/ubuntu/workspace/app/Http/Controllers/SlackController.php on line 67
+[25-Nov-2016 11:09:06 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/ubuntu/workspace/routes/web.php on line 48
+[25-Nov-2016 11:12:04 UTC] PHP Parse error:  syntax error, unexpected ']' in /home/ubuntu/workspace/routes/web.php on line 49
+[25-Nov-2016 11:12:17 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/ubuntu/workspace/routes/web.php on line 49
+[25-Nov-2016 11:12:28 UTC] PHP Parse error:  syntax error, unexpected ']' in /home/ubuntu/workspace/routes/web.php on line 49

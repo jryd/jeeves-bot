@@ -45,6 +45,31 @@ class SlackController extends Controller
                 $bot->reply('https://www.youtube.com/watch?v=' . $videoList[0]->id->videoId);
             });
             
+            $slackBot->hears('what are people in {country} watching?', function (Slackbot $bot, $country) use ($request) {
+                $geocode = app('geocoder')->geocode($country)->get();
+                $countryCode = $geocode->first()->getCountryCode();
+                $videoList = \Youtube::getPopularVideos($countryCode);
+                $bot->reply('https://www.youtube.com/watch?v=' . $videoList[array_rand($videoList)]->id);
+            });
+            
+            $slackBot->hears('hit me with a meme', function (Slackbot $bot) {
+                $client = new Client();
+                $response = $client->request('GET', 'https://api.imgur.com/3/g/memes', ["headers" => ["Authorization" => 'Client-ID ' . env('IMGUR_API_KEY')]]);
+                $response = json_decode($response->getBody());
+                $randomMeme = $response->data[array_rand($response->data)];
+                if ($randomMeme->is_album)
+                {
+                    $gallery = $client->request('GET', 'https://api.imgur.com/3/gallery/album/' . $randomMeme->id, ["headers" => ["Authorization" => 'Client-ID ' . env('IMGUR_API_KEY')]]);
+                    $gallery = json_decode($gallery->getBody());
+                    $randomImage = $gallery->data->images[array_rand($gallery->data->images)]->link;
+                    $bot->reply($randomImage);
+                }
+                else 
+                {
+                    $bot->reply($randomMeme->link);
+                }
+            });
+            
             /* Currently not working - spams channel - bug logged
             $slackBot->fallback(function(SlackBot $bot) {
                 $bot->reply('Lol wut? I don\'t understand.');

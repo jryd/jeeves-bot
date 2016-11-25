@@ -38,8 +38,20 @@ Route::get('/connect/slack', function(\GuzzleHttp\Client $httpClient){
 });
 
 Route::get('/test', function() {
-        $videoList = Youtube::searchVideos('Onlap Nightcore remix');
-        dd('https://www.youtube.com/watch?v=' . $videoList[0]->id->videoId);
-        /*$video = Youtube::getVideoInfo('roPgfuE6n0A');
-        dd($video);*/
+        $client = new GuzzleHttp\Client();
+        $response = $client->request('GET', 'https://api.imgur.com/3/g/memes', ["headers" => ["Authorization" => 'Client-ID 0f060ab4011d657']]);
+        $response = json_decode($response->getBody());
+        $randomMeme = $response->data[array_rand($response->data)];
+        if ($randomMeme->is_album)
+        {
+            $gallery = $client->request('GET', 'https://api.imgur.com/3/gallery/album/' . $randomMeme->id, ["headers" => ["Authorization" => 'Client-ID 0f060ab4011d657']]);
+            $gallery = json_decode($gallery->getBody());
+            $randomImage = $gallery->data->images[array_rand($gallery->data->images)]->link;
+            dd('Album: ' . $randomImage);
+        }
+        else 
+        {
+            dd('Image: ' . $randomMeme->link);
+        }
+        dd('Image: ' . $randomMeme);
 });
