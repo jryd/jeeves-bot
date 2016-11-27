@@ -138,3 +138,8 @@
 [25-Nov-2016 11:12:04 UTC] PHP Parse error:  syntax error, unexpected ']' in /home/ubuntu/workspace/routes/web.php on line 49
 [25-Nov-2016 11:12:17 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/ubuntu/workspace/routes/web.php on line 49
 [25-Nov-2016 11:12:28 UTC] PHP Parse error:  syntax error, unexpected ']' in /home/ubuntu/workspace/routes/web.php on line 49
+[27-Nov-2016 06:02:16 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/ubuntu/workspace/app/Http/Controllers/DistanceConversation.php on line 21
+[27-Nov-2016 06:02:17 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/ubuntu/workspace/app/Http/Controllers/DistanceConversation.php on line 21
+[27-Nov-2016 06:02:37 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/ubuntu/workspace/app/Http/Controllers/DistanceConversation.php on line 21
+[27-Nov-2016 06:02:39 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/ubuntu/workspace/app/Http/Controllers/DistanceConversation.php on line 21
+[27-Nov-2016 06:03:18 UTC] PHP Fatal error:  Class 'App\Http\Controllers\GuzzleHttp\Client' not found in /home/ubuntu/workspace/app/Http/Controllers/DistanceConversation.php on line 80

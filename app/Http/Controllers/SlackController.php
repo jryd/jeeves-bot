@@ -52,7 +52,8 @@ class SlackController extends Controller
                 $bot->reply('https://www.youtube.com/watch?v=' . $videoList[array_rand($videoList)]->id);
             });
             
-            $slackBot->hears('hit me with a meme', function (Slackbot $bot) {
+            $slackBot->hears('meme me', function (Slackbot $bot) {
+                $bot->reply('One moment...');
                 $client = new Client();
                 $response = $client->request('GET', 'https://api.imgur.com/3/g/memes', ["headers" => ["Authorization" => 'Client-ID ' . env('IMGUR_API_KEY')]]);
                 $response = json_decode($response->getBody());
@@ -68,6 +69,14 @@ class SlackController extends Controller
                 {
                     $bot->reply($randomMeme->link);
                 }
+            });
+            
+            $slackBot->hears('thanks for watching!', function (SlackBot $bot) use ($request) {
+                $bot->reply('Have a great week! :tada:');
+            });
+            
+            $slackBot->hears('travel', function (SlackBot $bot) use ($request) {
+                $bot->startConversation(new DistanceConversation());
             });
             
             /* Currently not working - spams channel - bug logged
